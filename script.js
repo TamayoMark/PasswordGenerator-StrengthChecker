@@ -124,7 +124,7 @@ function updatePasswordStrength(pass) {
     } else if(strengthValue < 50) {
         progress.style.backgroundColor = "var(--medium-color)";
         progress.style.boxShadow = "var(--medium-shadow)";
-        passwordStrength.textContent = "GOOD PASSWORD"
+        passwordStrength.textContent = "MEDIUM PASSWORD"
         passwordStrength.style.color = "var(--medium-color)";
     } else if(strengthValue < 75) {
         progress.style.backgroundColor = "var(--strong-color)";

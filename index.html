@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <center><form class="form glass">
+        <div class="header">
+            <h2>PASSWORD GENERATOR & STRENGTH CHECKER</h2>
+        </div>
+        <div class="body">
+            <label for="" id="password-container">
+                <input type="text" name="" id="password" oninput="updatePasswordStrength(this.value)">
+                <div id="progress" style="background-color: rgb(10, 255, 10);"></div>
+                <br>
+                <p style="font-weight: bold;" id="password-strength"></p>
+            </label>
+            <label for="password-length">
+                <h4 class="title">PASSWORD LENGTH <span id="password-length">8</span></h4>
+                <input type="range" class="hover" id="password-length-slider" name="password-length" min="8" max="30" value="8" oninput="readLength(this.value)">
+            </label>
+            <label for="" id="password-options">
+                <h4 class="title">PASSWORD OPTIONS</h4>
+                <div id="error-container" style="width: 100%; display: none;"><h5 id="error-text" style="width: 250px; border-radius: 5px; padding: 10px; border-left: 10px solid red; color: red; background-color: white;">PLEASE SELECT OPTION</h5></div>
+                
+                <span>
+                    <input class="hover" type="checkbox" id="lowercase" required checked> Lowercase (a-z)
+                </span>
+                <span>
+                    <input class="hover" type="checkbox" id="uppercase"> Uppercase (A-Z)
+                </span>
+                <span>
+                    <input class="hover" type="checkbox" id="numbers"> Numbers (0-9)
+                </span>
+                <span>
+                    <input class="hover" type="checkbox" id="symbols"> Symbols (!-$^+)
+                </span>
+                <span>
+                    <input class="hover" type="checkbox" id="exclude-duplicate"> Exclude-Duplicate
+                </span>
+                <span>
+                    <input class="hover" type="checkbox" id="include-spaces"> Include-Spaces
+                </span>
+            </label>
+        </div>
+        <div class="footer">
+            <input type="button" id="generate-btn" class="glass hover" onclick="generatePassword()" value="GENERATE PASSWORD"/>
+        </div>
+    </form></center>
+    
+</body>
+</html>
